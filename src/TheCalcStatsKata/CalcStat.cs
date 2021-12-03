@@ -64,5 +64,10 @@ namespace TDD_Katas_project.TheCalcStatsKata
         private static string GetElementCount(IEnumerable<int> numbers) => numbers?.Count().ToString(CultureInfo.InvariantCulture);
 
         private static string GetSeriesAverage(IEnumerable<int> numbers) => numbers?.Average().ToString(CultureInfo.InvariantCulture);
+
+        public static bool AreSumsEqual(IEnumerable<int> numbers1 , IEnumerable<int> numbers2)
+        {
+            return numbers1.Sum() == numbers2.Sum();
+        }
     }
 }
