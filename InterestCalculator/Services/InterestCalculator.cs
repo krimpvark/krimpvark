@@ -43,6 +43,25 @@ namespace InterestCalculator
             return endBalance;
         }
 
+        public decimal InterestExample(decimal openingBalance, decimal rate, DateTime startDate, DateTime endDate)
+        {
+            decimal endBalance = openingBalance;
+
+            int numberOfDaysInBank = GetDays(startDate, endDate);
+
+            if (0 == numberOfDaysInBank)
+                return openingBalance;
+            else
+            {
+                rate /= numberOfDaysInBank;
+
+                for (int i = 0; i <= numberOfDaysInBank; i++)
+                    endBalance += AddInterest(rate, endBalance);
+            }
+
+            return endBalance;
+        }
+
         private int GetDays(DateTime startDate, DateTime endDate)
         {
             if (startDate.Date > endDate.Date)

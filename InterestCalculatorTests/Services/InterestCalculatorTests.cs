@@ -26,5 +26,14 @@ namespace InterestCalculator.Tests
 
             Assert.AreEqual(val, 100.11005501650330046204620330m);
         }
+
+        /// <summary>
+        /// This is what a default test looks like
+        /// </summary>
+        [TestMethod()]
+        public void InterestExampleTest()
+        {
+            Assert.Fail();
+        }
     }
 }
