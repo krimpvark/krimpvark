@@ -9,7 +9,7 @@ namespace InterestCalculator
 
         }
 
-        public decimal Interestreceived(decimal openingBalance, decimal rate, DateTime startDate, DateTime endDate)
+        public decimal InterestReceived(decimal openingBalance, decimal rate, DateTime startDate, DateTime endDate)
         {
             decimal endBalance = openingBalance;
             
@@ -20,6 +20,25 @@ namespace InterestCalculator
             else
                 for (int i = 0; i <= numberOfDaysInBank; i++)
                     endBalance += AddInterest(rate, endBalance);
+
+            return endBalance;
+        }
+
+        public decimal InterestDaily(decimal openingBalance, decimal rate, DateTime startDate, DateTime endDate)
+        {
+            decimal endBalance = openingBalance;
+
+            int numberOfDaysInBank = GetDays(startDate, endDate);
+
+            if (0 == numberOfDaysInBank)
+                return openingBalance;
+            else
+            {
+                rate /= numberOfDaysInBank;
+                
+                for (int i = 0; i <= numberOfDaysInBank; i++)
+                    endBalance += AddInterest(rate, endBalance);
+            }
 
             return endBalance;
         }

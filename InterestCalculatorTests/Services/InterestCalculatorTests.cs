@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using InterestCalculator;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace InterestCalculator.Tests
@@ -11,9 +12,19 @@ namespace InterestCalculator.Tests
         {
             InterestCalculator calc = new InterestCalculator();
 
-            decimal val = calc.Interestreceived(100.0m, 0.1m, DateTime.Now.AddDays(-1.0), DateTime.Now);
+            decimal val = calc.InterestReceived(100.0m, 0.1m, DateTime.Now.AddDays(-10.0), DateTime.Now);
 
-            Assert.AreEqual(val, 100.2001m);
+            Assert.AreEqual(val, 101.10551653304624623301650550m);
+        }
+
+        [TestMethod()]
+        public void InterestDailyTest()
+        {
+            InterestCalculator calc = new InterestCalculator();
+
+            decimal val = calc.InterestDaily(100.0m, 0.1m, DateTime.Now.AddDays(-10.0), DateTime.Now);
+
+            Assert.AreEqual(val, 100.11005501650330046204620330m);
         }
     }
 }

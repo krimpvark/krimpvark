@@ -8,7 +8,8 @@ namespace InterestCalculator
         {
             InterestCalculator calc = new InterestCalculator();
 
-            Console.WriteLine($"{calc.Interestreceived(100.0m, 0.1m, DateTime.Now.AddDays(-1.0), DateTime.Now)}");
+            Console.WriteLine($"{calc.InterestReceived(100.0m, 0.1m, DateTime.Now.AddDays(-10.0), DateTime.Now)}");
+            Console.WriteLine($"{calc.InterestDaily(100.0m, 0.1m, DateTime.Now.AddDays(-10.0), DateTime.Now)}");
         }
     }
 }
