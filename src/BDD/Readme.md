@@ -28,9 +28,14 @@ Scenario: Calculate Interist Rate
 	Then the result should be 417.7248169415651
 ```
 
-This allows non-technical staff easily to evaluate the logic & provide developers with a simplified requirement. 
+Feature files are written in gherkin syntax to provide test cases in your native language.
+Feature files can be separated from your solution and has tagging capability for CI/CD pipelines.
 
-For a real world example, BA's & product owners would be able to define the feature scenarios for given features with validated results.
+For more examples & keyword definitions, visit https://specflow.org/learn/gherkin/
+
+The feature files allow non-technical staff easily to evaluate the logic & provide developers with a simplified requirement statement for the specified feature set. 
+
+As for a real world example, BA's & product owners would be able to define the feature scenarios for given tasks with validated results.
 
 For the test case it self, it provides the developers a simplified framework to generate the relevant test cases for said feature.
 
