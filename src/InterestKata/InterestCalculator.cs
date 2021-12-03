@@ -21,7 +21,7 @@ public class InterestCalculator
                 endBalance += AddInterest(rate, endBalance);
             }
 
-        return endBalance / 365;
+        return endBalance;
     }
 
     private int GetDays(DateTime startDate, DateTime endDate)
@@ -36,6 +36,6 @@ public class InterestCalculator
 
     private decimal AddInterest(decimal interestRate, decimal balance)
     {
-        return (balance * interestRate) / 100;
+        return ((balance * interestRate) / 100) / 365;
     }
 }
