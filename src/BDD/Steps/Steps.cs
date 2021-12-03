@@ -42,7 +42,7 @@ namespace TDD_Katas.BDD
             _endDate = endDate;
         }
 
-        [When("the Interist rate is calculated")]
+        [When("the Interest rate is calculated")]
         public void CalculateResult()
         {
           _result = _interestCalculator.Interestreceived(_balance, _rate, _startDate, _endDate);

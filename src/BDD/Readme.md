@@ -13,18 +13,18 @@ In our Example, we used an interest rate calculation method.
 We started by creating a Feature File:
 
 ```yaml
-Feature: InteristRate
+Feature: InterestRate
 
-![InteristRate]
-Simple Calculation of Interist Rate
+![InterestRate]
+Simple Calculation of Interest Rate
 
-@InteristRate
-Scenario: Calculate Interist Rate
+@InterestRate
+Scenario: Calculate Interest Rate
 	Given the opening balance is 100
 	And the rate is 10
 	And the startDate is 2021-05-01
 	And the endDate is 2021-05-15
-	When the Interist rate is calculated
+	When the Interest rate is calculated
 	Then the result should be 417.7248169415651
 ```
 
@@ -84,7 +84,7 @@ namespace TDD_Katas.BDD
             _endDate = endDate;
         }
 
-        [When("the Interist rate is calculated")]
+        [When("the Interest rate is calculated")]
         public void CalculateResult()
         {
           _result = _interestCalculator.Interestreceived(_balance, _rate, _startDate, _endDate);
