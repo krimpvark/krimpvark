@@ -1,5 +1,5 @@
 ### Description
-Simply defines the Test Driven Development Katas. In this, lets try to create most famous katas to understand what are exactly Katas. These Katas can also be used for practicising your C# skills for Unit testing..
+Simply defines the Test Driven Development Katas. In this, lets try to create most famous katas to understand what are exactly Katas. These Katas can also be used for practicising your C# skills for Unit testing.
 
 This is a clone of the original repo so we can mess around with it. It will be removed when we are done with it
 
