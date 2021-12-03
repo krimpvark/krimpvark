@@ -7,5 +7,6 @@ namespace TDD_Katas_project.TheHarryPoterKata
     /// </summary>
     public class HarryPoter
     {
+        public string Wand { get; set; }
     }
 }
