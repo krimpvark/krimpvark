@@ -75,6 +75,11 @@ namespace TDD_Katas_project.TheWordWrapKata
 
         private static bool IsContainNullEmptyOrWhiteSpaces(string word) => (string.IsNullOrEmpty(word)) || (string.IsNullOrWhiteSpace(word));
 
+        /// <summary>
+        /// testing
+        /// </summary>
+        /// <param name="wrd"></param>
+        /// <returns></returns>
         private static bool IsWhiteSpaceOrNewLine(char wrd) => char.IsWhiteSpace(wrd) && (wrd == '\n');
     }
 }
